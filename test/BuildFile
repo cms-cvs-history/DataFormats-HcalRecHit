@@ -4,6 +4,6 @@
 <use name=FWCore/ParameterSet>
 
 <library file=HcalRecHitDump.cc name=HcalRecHitDump>
-  <flags SEAL_PLUGIN_NAME="HcalRecHitDump">
+  <flags EDM_PLUGIN=1>
 </library>
 

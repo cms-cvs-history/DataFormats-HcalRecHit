@@ -45,6 +45,7 @@ namespace cms {
     analyzeT<HcalCalibRecHitCollection>(e);
     analyzeT<ZDCRecHitCollection>(e);
     analyzeT<CastorRecHitCollection>(e);
+    analyzeT<HcalUpgradeRecHitCollection>(e, "HcalUpgrade");
 
     edm::Handle<HcalSourcePositionData> spd;
     try {

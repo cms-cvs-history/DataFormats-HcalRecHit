@@ -11,6 +11,10 @@ HcalUpgradeRecHit::HcalUpgradeRecHit(const HcalDetId& id, float energy, float ti
 }
 
 std::ostream& operator<<(std::ostream& s, const HcalUpgradeRecHit& hit) {
-  return s << hit.id() << ": " << hit.energy() << " GeV, " << hit.time() << "-'" << hit.timeFalling() << " ns";
+  s << hit.id() << ": " << hit.energy() << " GeV";
+  if(hit.time() > -998) {
+    s << ", t= " << hit.time() << " to " << hit.timeFalling() << " ns";
+  }
+  return s;
 }
 
